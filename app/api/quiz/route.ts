@@ -8,6 +8,10 @@ export async function GET(req: NextRequest) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
 
     const prompt = `Generate a multiple-choice quiz question in valid JSON format only. Do NOT include Markdown formatting. 
+
+    do not repeat the questions 
+
+
    Example:
         {
             "question": "What is the capital of France?",
